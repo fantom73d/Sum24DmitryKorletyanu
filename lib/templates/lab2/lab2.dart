@@ -79,7 +79,7 @@ class FictionBook extends Book {
   }
 }
 
-mixin JsonSerializable on Book {
+mixin JsonSerializable on Book {  
   Map<String, dynamic> toJson() {
     return {
       "title": title,
