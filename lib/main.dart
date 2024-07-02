@@ -8,6 +8,7 @@ class Lab1 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
+<<<<<<< HEAD
       home: LAb1HomePage(),
     );
   }
@@ -113,6 +114,17 @@ class LAb1HomePage extends StatelessWidget {
             )
           )
       ],
+=======
+      home: Scaffold(
+        body: Center(
+          child: Column(
+            children: [
+              Text('Hello World!'),
+            ],
+          ),
+        ),
+      ),
+>>>>>>> 8153cba42d2512afba394f7988dc5f86a4fdccfc
     );
   }
 }
