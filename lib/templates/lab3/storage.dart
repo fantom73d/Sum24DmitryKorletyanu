@@ -4,13 +4,14 @@ class LocalStorageService {
   static const _waterIntakeKey = 'waterIntake';
 
   Future<void> saveWaterIntake(double intake) async {
-    final prefs = await SharedPreferences.getInstance();
-    // TODO - Save the water intake into prefs  
+    final preferences = await SharedPreferences.getInstance();
+    // TODO - Save the water intake into preferences
+    await preferences.setDouble(_waterIntakeKey, intake);
   }
 
   Future<double> getWaterIntake() async {
-    final prefs = await SharedPreferences.getInstance();
-    // TODO - Get the water intake from prefs, remove 'return 0.0'
-    return 0.0;
+    final preferences = await SharedPreferences.getInstance();
+    // TODO - Get the water intake from preferences, remove 'return 0.0'
+    return preferences.getDouble(_waterIntakeKey) ?? 0.0;
   }
 }
